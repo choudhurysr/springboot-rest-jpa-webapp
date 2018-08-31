@@ -1,0 +1,23 @@
+<div class="container pad-top">
+  <table class="table questiontable">
+      <tr>
+          <td width="250"><h3>Details</h3></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td width="250">Subject</td>
+          <td align="left">{{question.subject}}</td>
+      </tr>
+      <tr>
+          <td width="250">Question</td>
+          <td align="left">{{question.description}}</td>
+      </tr>
+      <tr>
+          <td width="250">Answer</td>
+          <td align="left">{{question.answer}}</td>
+      </tr>
+  </table>
+  <div>
+      <a class="btn btn-primary" ui-sref="editQuestion({id:question.id})">Edit</a>
+  </div>
+</div>

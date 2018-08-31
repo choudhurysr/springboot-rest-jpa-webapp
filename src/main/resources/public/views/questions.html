@@ -1,0 +1,23 @@
+<div class="container pad-top">
+  <a ui-sref="newQuestion" class="btn-primary btn-lg nodecoration">Add New Question</a>
+  <table class="table questiontable">
+      <tr>
+          <td><h3>All Questions</h3></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><h3>Subject</h3></td>
+          <td><h3>Question</h3></td>
+          <td><h3>Answer</h3></td>
+      </tr>
+      <tr ng-repeat="question in questions">
+          <td>{{question.subject}}</td>
+          <td>{{question.description}}</td>
+          <td>{{question.answer}}</td>
+          <td>
+              <a class="btn btn-primary" ui-sref="viewQuestion({id:question.id})">View</a>
+              <a class="btn btn-danger"  ng-click="deleteQuestion(question)">Delete</a>
+          </td>
+      </tr>
+  </table>
+</div>
